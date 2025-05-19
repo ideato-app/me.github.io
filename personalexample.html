@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Showcase</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/favs.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Custom portfolio showcase styles */
+        body {
+            background-color: #f8f9fa;
+            padding-top: 0;
+        }
+
+        .portfolio-header {
+            background: linear-gradient(rgba(26, 77, 128, 0.9), rgba(62, 108, 150, 0.8)), url('assets/img/project/allprojects.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .portfolio-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-card:hover .portfolio-img img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-info {
+            padding: 25px;
+        }
+
+        .portfolio-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-description {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .portfolio-likes {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .like-button {
+            background-color: transparent;
+            border: none;
+            color: #dc3545;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .like-button:hover {
+            transform: scale(1.2);
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .back-to-site {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            background: var(--p1-clr);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .back-to-site:hover {
+            background: var(--p2-clr);
+            transform: translateY(-3px);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back to Site Button -->
+    <a href="service/personal-website.html" class="back-to-site">
+        <i class="fas fa-arrow-left"></i>
+        Back to Service Page
+    </a>
+
+    <!-- Portfolio Header -->
+    <header class="portfolio-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Portfolio Showcase</h1>
+            <p class="lead mb-0">Explore our featured projects with detailed information and analytics</p>
+        </div>
+    </header>
+
+    <!-- Portfolio Showcase -->
+    <section class="portfolio-showcase">
+        <div class="container">
+            <div class="row">
+                <!-- Portfolio Item 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img">
+                            <img src="assets/img/project/allprojects.png" alt="E-commerce Website">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">E-commerce Platform</h3>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">React</span>
+                            </div>
+                            <p class="portfolio-description">
+                                A comprehensive e-commerce solution with product management, user authentication, and
+                                payment processing capabilities.
+                            </p>
+                            <div class="portfolio-meta">
+                                <div class="portfolio-likes">
+                                    <button class="like-button" onclick="updateLikes(1)">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <span id="likes-1" class="likes-count">124</span> likes
+                                </div>
+                                <a href="#portfolio-1"
+                                    class="common-btn box-style d-inline-flex justify-content-center align-items-center gap-2 fw-500 white-clr py-2 px-3 overflow-hidden rounded-3"
+                                    style="background-color: var(--p1-clr);">
+                                    View Details
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img">
+                            <img src="assets/img/project/allprojects.png" alt="Mobile App">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">Fitness Tracking App</h3>
+                            <div class="portfolio-tags">
+                                <span class="tag">Mobile App</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Health Tech</span>
+                            </div>
+                            <p class="portfolio-description">
+                                A cross-platform mobile application that helps users track their workouts, nutrition,
+                                and fitness progress.
+                            </p>
+                            <div class="portfolio-meta">
+                                <div class="portfolio-likes">
+                                    <button class="like-button" onclick="updateLikes(2)">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <span id="likes-2" class="likes-count">89</span> likes
+                                </div>
+                                <a href="#portfolio-2"
+                                    class="common-btn box-style d-inline-flex justify-content-center align-items-center gap-2 fw-500 white-clr py-2 px-3 overflow-hidden rounded-3"
+                                    style="background-color: var(--p1-clr);">
+                                    View Details
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img">
+                            <img src="assets/img/project/allprojects.png" alt="AI Dashboard">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">AI Analytics Dashboard</h3>
+                            <div class="portfolio-tags">
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">Data Visualization</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <p class="portfolio-description">
+                                An intelligent dashboard that uses machine learning to analyze data patterns and provide
+                                actionable business insights.
+                            </p>
+                            <div class="portfolio-meta">
+                                <div class="portfolio-likes">
+                                    <button class="like-button" onclick="updateLikes(3)">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <span id="likes-3" class="likes-count">156</span> likes
+                                </div>
+                                <a href="#portfolio-3"
+                                    class="common-btn box-style d-inline-flex justify-content-center align-items-center gap-2 fw-500 white-clr py-2 px-3 overflow-hidden rounded-3"
+                                    style="background-color: var(--p1-clr);">
+                                    View Details
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-4 bg-dark text-center text-white mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 Portfolio Showcase. All Rights Reserved.</p>
+            <p class="mt-2 mb-0"><a href="service/personal-website.html"
+                    class="text-white text-decoration-underline">Return to Service Page</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple like functionality
+        function updateLikes(id) {
+            const likesElement = document.getElementById(`likes-${id}`);
+            let currentLikes = parseInt(likesElement.textContent);
+            likesElement.textContent = currentLikes + 1;
+
+            // Visual feedback
+            const button = event.currentTarget;
+            button.classList.add('liked');
+            button.style.transform = 'scale(1.3)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 200);
+        }
+    </script>
+</body>
+
+</html>
