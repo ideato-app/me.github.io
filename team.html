@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Idea to System">
+    <meta name="description" content="Idea to System ">
+    <!-- ======== Page title ============ -->
+    <title>Idea to System</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="assets/img/logo/favs.png">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="body-bg">
+
+    <div class="custom-container-space rounded-top-4 cmn-bg mt-xxl-5 mb-xxl-5 mb-4">
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="D" class="letters-loading">
+                        D
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="2" class="letters-loading">
+                        2
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="Y" class="letters-loading">
+                        Y
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Cursor Pointer -->
+        <div class="mouse-follower">
+            <span class="cursor-outline"></span>
+            <span class="cursor-dot"></span>
+        </div>
+        <!-- End Cursor Pointer -->
+
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content pb-2">
+                        <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-dark.png" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul class="d-grid gap-2">
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">66 Broklyant,New India</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:ideato.app.official@gmail.com">ideato.app.official@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">All Day</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+201104532940" class="d-block">+201104532940 </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="contact.html"
+                                    class="common-btn text-white box-style first-box d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs-seven fw-normal white-clr overflow-hidden rounded-1 py-2"
+                                    style="background-color: var(--p1-clr);">
+                                    Start Your Project
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="social-wrapper d-flex flex-wrap align-items-center gap-xxl-3 gap-2">
+                                <a href="https://www.facebook.com/ideato.app.official" class="rounded-circle cmn-bg">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://x.com/ideato_app" class="rounded-circle cmn-bg">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.3881 7.49266L16.3338 0.825195H14.9249L9.76215 6.61446L5.63871 0.825195H0.882812L7.11826 9.57959L0.882812 16.5715H2.29185L7.7438 10.4578L12.0985 16.5715H16.8544L10.3877 7.49266H10.3881ZM8.45818 9.65672L7.8264 8.78498L2.79954 1.84844H4.96374L9.02047 7.44645L9.65225 8.31819L14.9255 15.5947H12.7613L8.45818 9.65705V9.65672Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ideato-app" class="rounded-circle cmn-bg">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ideato.app/" class="rounded-circle cmn-bg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://github.com/ideato-app" class="rounded-circle cmn-bg">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-view-thumb w-100 mt-4 d-xl-block d-none mb-4 cmn-bg rounded-4 p-4">
+                            <img src="assets/img/banner/contact-view.jpg" alt="img" class="w-100 rounded-4">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+        <header id="header-sticky" class="header-1 header-version1">
+            <div class="container">
+                <div class="header-common-wrapper">
+                    <div class="header-main">
+                        <div class="header-left">
+                            <div class="logo">
+                                <a href="index.html" class="header-logo"
+                                    style="display: flex; align-items: center; text-decoration: none;">
+                                    <img src="assets/img/logo/logo-dark.png" alt="logo-img">
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-right d-flex justify-content-end align-items-center">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="has-dropdown active menu-thumb">
+                                                <a href="index.html">
+                                                    Home
+
+                                                </a>
+
+                                            </li>
+                                            <li>
+                                                <a href="about.html">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="service.html">
+                                                    Services
+
+                                                </a>
+
+                                            </li>
+                                            <li>
+                                                <a href="project.html">
+                                                    Projects
+
+                                                </a>
+
+                                            </li>
+
+                                            <li class="has-dropdown">
+                                                <a href="#0">
+                                                    Pages
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="about.html">About Us</a></li>
+                                                    <li class="has-dropdown">
+                                                        <a href="team.html">
+                                                            Team
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="team.html">Team</a></li>
+                                                            <li><a href="team-details.html">Team Details</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li><a href="faqs.html">Faqs</a></li>
+
+                                                    <li><a href="comming-soon.html">Coming Soon</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <a href="#0" class="search-trigger search-icon d-xl-none d-block">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                        <a href="contact.html"
+                            class="common-btn box-style btn2 d-xl-inline-flex d-none justify-content-center align-items-center gap-xxl-2 gap-2 fw-500 white-clr py-3 overflow-hidden rounded100"
+                            style="background-color: var(--p2-clr);">
+                            Contact Us
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                        <div class="header__hamburger d-xl-none my-auto">
+                            <div class="sidebar__toggle style2">
+                                <img src="assets/img/icon/menu.png" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section Start -->
+        <section class="breadcrumb-section cmn-bg position-relative fix">
+            <div class="container">
+                <div
+                    class="bread-content px-3 d-flex flex-wrap gap-3 align-items-center justify-content-md-between justify-content-center">
+                    <h2 class="black wow fadeInUp">Team</h2>
+                    <ul class="d-flex align-items-center gap-3">
+                        <li>
+                            <a href="index.html" class="fs-six black-clr fw-500">Home</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right p1-clr"></i></li>
+                        <li class="fs-six black-clr fw-500">Team</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bread Ele -->
+            <img src="assets/img/element/bread-shape.png" alt="img" class="bread-ele">
+        </section>
+        <!-- Banner Section Start -->
+
+        <!-- Team ion Start -->
+        <!-- Global Portfolio start -->
+        <section class="global-portfolio space-top pb-120 n0-bg">
+            <div class="container">
+                <div class="mixitup-button-area pb-40">
+                    <button type="button" class="control" data-filter="all">All</button>
+                    <button type="button" class="control" data-filter=".business">Seo Expert</button>
+                    <button type="button" class="control" data-filter=".green">Markeing Expert</button>
+                    <button type="button" class="control" data-filter=".pink">Software Analysist</button>
+                    <button type="button" class="control" data-filter=".finance">Data Analysist</button>
+                    <button type="button" class="control d-none" data-filter=".agency">Agency</button>
+                </div>
+                <div class="masonry-minimal-wrap mixitup-filter">
+                    <div class="portfolio3-grid-item filtering-item mix green d-center">
+                        <div class="team-items">
+                            <div class="thumb w-100 rounded-4 mb-lg-4 mb-3">
+                                <img src="assets/img/team/team1.jpg" alt="img" class="rounded-4 w-100">
+                            </div>
+                            <div class="content d-flex justify-content-between align-items-center">
+                                <div class="cont">
+                                    <h3 class="black-clr mb-1">
+                                        <a href="team-details.html" class="black-clr fw-semibold">Mohamed</a>
+                                    </h3>
+                                    <p class="pra fs-eight">
+                                        Owner
+                                    </p>
+                                </div>
+                                <div class="plus-icon">
+                                    <div class="icons cmn-bg d-center">
+                                        <i class="fa-solid fa-plus black-clr"></i>
+                                    </div>
+                                    <div class="social-wrapper d-grid flex-wrap align-items-center gap-xxl-2 gap-2">
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.3881 7.49266L16.3338 0.825195H14.9249L9.76215 6.61446L5.63871 0.825195H0.882812L7.11826 9.57959L0.882812 16.5715H2.29185L7.7438 10.4578L12.0985 16.5715H16.8544L10.3877 7.49266H10.3881ZM8.45818 9.65672L7.8264 8.78498L2.79954 1.84844H4.96374L9.02047 7.44645L9.65225 8.31819L14.9255 15.5947H12.7613L8.45818 9.65705V9.65672Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fa-brands fa-pinterest-p"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio3-grid-item filtering-item mix pink business agency finance d-center">
+                        <div class="team-items">
+                            <div class="thumb w-100 rounded-4 mb-lg-4 mb-3">
+                                <img src="assets/img/team/team2.jpg" alt="img" class="rounded-4 w-100">
+                            </div>
+                            <div class="content d-flex justify-content-between align-items-center">
+                                <div class="cont">
+                                    <h3 class="black-clr mb-1">
+                                        <a href="team-details.html" class="black-clr fw-semibold">Gymy</a>
+                                    </h3>
+                                    <p class="pra fs-eight">
+                                        Social Media
+                                    </p>
+                                </div>
+                                <div class="plus-icon">
+                                    <div class="icons cmn-bg d-center">
+                                        <i class="fa-solid fa-plus black-clr"></i>
+                                    </div>
+                                    <div class="social-wrapper d-grid flex-wrap align-items-center gap-xxl-2 gap-2">
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.3881 7.49266L16.3338 0.825195H14.9249L9.76215 6.61446L5.63871 0.825195H0.882812L7.11826 9.57959L0.882812 16.5715H2.29185L7.7438 10.4578L12.0985 16.5715H16.8544L10.3877 7.49266H10.3881ZM8.45818 9.65672L7.8264 8.78498L2.79954 1.84844H4.96374L9.02047 7.44645L9.65225 8.31819L14.9255 15.5947H12.7613L8.45818 9.65705V9.65672Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fa-brands fa-pinterest-p"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio3-grid-item filtering-item mix green finance d-center">
+                        <div class="team-items">
+                            <div class="thumb w-100 rounded-4 mb-lg-4 mb-3">
+                                <img src="assets/img/team/team3.jpg" alt="img" class="rounded-4 w-100">
+                            </div>
+                            <div class="content d-flex justify-content-between align-items-center">
+                                <div class="cont">
+                                    <h3 class="black-clr mb-1">
+                                        <a href="team-details.html" class="black-clr fw-semibold">Moaz</a>
+                                    </h3>
+                                    <p class="pra fs-eight">
+                                        Security
+                                    </p>
+                                </div>
+                                <div class="plus-icon">
+                                    <div class="icons cmn-bg d-center">
+                                        <i class="fa-solid fa-plus black-clr"></i>
+                                    </div>
+                                    <div class="social-wrapper d-grid flex-wrap align-items-center gap-xxl-2 gap-2">
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.3881 7.49266L16.3338 0.825195H14.9249L9.76215 6.61446L5.63871 0.825195H0.882812L7.11826 9.57959L0.882812 16.5715H2.29185L7.7438 10.4578L12.0985 16.5715H16.8544L10.3877 7.49266H10.3881ZM8.45818 9.65672L7.8264 8.78498L2.79954 1.84844H4.96374L9.02047 7.44645L9.65225 8.31819L14.9255 15.5947H12.7613L8.45818 9.65705V9.65672Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#" class="rounded-circle blackbg">
+                                            <i class="fa-brands fa-pinterest-p"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Global Portfolio end -->
+
+        <!-- Faq Section Start -->
+        <section class="faq-section section-padding fix">
+            <div class="container">
+                <div
+                    class="section-title d-flex justify-content-between flex-md-nowrap flex-wrap gap-md-4 gap-2 align-items-end mb-50">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp black visible-slowly-right" data-wow-delay=".3s">
+                            Ask me Some Question
+                        </h2>
+                    </div>
+                    <p class="fs-five wow fadeInLeft">
+                        IT Technology is a dynamic field implementation an <br> support management IT Technology
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="accordion custom-accordion accordion-style2" id="accordionExample">
+                        <div class="row g-4">
+                            <div class="col-lg-6 d-flex flex-column gap-md-4 gap-3">
+                                <div class="accordion-item rounded-5 bg-transparent wow fadeInUp" data-wow-delay=".3s">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            How does your Idea Analysis service work?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-1">
+                                            <p class="fs-eight pra">
+                                                Our Idea Analysis service begins with a thorough consultation where we
+                                                evaluate
+                                                your concept's feasibility, market potential, and technical
+                                                requirements. We
+                                                then
+                                                provide validation through market research and user testing to ensure
+                                                your
+                                                idea
+                                                has a solid foundation before development begins.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item rounded-5 bg-transparent wow fadeInUp" data-wow-delay=".5s">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            What app development services do you provide?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-1">
+                                            <p class="fs-16">
+                                                We offer full-cycle app development services including UI/UX design,
+                                                frontend and
+                                                backend development, database architecture, API integration, and
+                                                testing. We
+                                                develop
+                                                native iOS and Android apps, cross-platform solutions, and progressive
+                                                web
+                                                applications
+                                                tailored to your business needs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item rounded-5 bg-transparent wow fadeInUp" data-wow-delay=".6s">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            How do you ensure application security?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-1">
+                                            <p class="fs-16">
+                                                Security is integrated at every stage of our development process. We
+                                                conduct
+                                                thorough
+                                                code reviews, implement secure authentication methods, use encryption
+                                                for
+                                                sensitive data,
+                                                and perform regular security testing including penetration testing and
+                                                vulnerability scans.
+                                                Our Security team led by Moaz ensures your application meets industry
+                                                security standards.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex flex-column gap-md-4 gap-3">
+                                <div class="accordion-item rounded-5 bg-transparent wow fadeInUp" data-wow-delay=".3s">
+                                    <h2 class="accordion-header" id="headingOne01">
+                                        <button class="accordion-button bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne01"
+                                            aria-expanded="false" aria-controls="collapseOne01">
+                                            How do your deployment services work?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne01" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne01" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-1">
+                                            <p class="fs-eight pra">
+                                                Our deployment services include setting up the necessary infrastructure,
+                                                configuring servers, implementing CI/CD pipelines, and deploying your
+                                                application
+                                                to your preferred environment (cloud or on-premises). We handle all
+                                                technical aspects
+                                                and provide post-deployment support to ensure smooth operation.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item rounded-5 bg-transparent wow fadeInUp" data-wow-delay=".5s">
+                                    <h2 class="accordion-header" id="headingTwo01">
+                                        <button class="accordion-button bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo01"
+                                            aria-expanded="false" aria-controls="collapseTwo01">
+                                            What automation services do you provide?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo01" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo01" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-1">
+                                            <p class="fs-16">
+                                                We provide business process automation services to streamline repetitive
+                                                tasks,
+                                                improve efficiency, and reduce human error. This includes workflow
+                                                automation,
+                                                document processing, data extraction, customer service automation, and
+                                                integrating
+                                                systems through APIs to create seamless operational flows across your
+                                                organization.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item rounded-5 bg-transparent wow fadeInUp" data-wow-delay=".6s">
+                                    <h2 class="accordion-header" id="headingThree01">
+                                        <button class="accordion-button bg-transparent collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree01"
+                                            aria-expanded="false" aria-controls="collapseThree01">
+                                            What makes your UI/UX design services stand out?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree01" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree01" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-1">
+                                            <p class="fs-16">
+                                                Our UI/UX design services focus on creating intuitive, engaging user
+                                                experiences
+                                                based on thorough user research and testing. We emphasize accessibility,
+                                                visual
+                                                appeal, and seamless interaction across all devices. Our design process
+                                                involves
+                                                close collaboration with clients, iterative prototyping, and continuous
+                                                improvement
+                                                based on user feedback and analytics.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--<< Footer Section Start >>-->
+          <!--<< Footer Section Start >>-->
+    <footer class="footer-section style2 z-1 position-relative fix">
+        <div class="container">
+            <div class="common-wrapper z-1 position-relative cmn-bg rounded-top-4 pt-80 px-xxl-5 px-4">
+                <div class="footer-widgets-wrapper">
+                    <div class="social-adjustment d-flex justify-content-between align-items-center">
+                        <div class="single-footer-widget footer2-form wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="widget-head">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-dark.png" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="footer-content">
+                                <p class="pra fs-eight mb-30 d-block">
+                                    Information Technology is a broad field the main man encompassing the
+                                    design Info Technology is a broad field the main
+                                    man
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="adjust-lin"></div>
+                        <div class="footer2-social">
+                            <a href="mailto:ideato.app.official@gmail.com" class="emails">
+                                ideato.app.official@gmail.com
+                            </a>
+                            <div class="social-wrapper d-flex flex-wrap align-items-center gap-xxl-3 gap-2">
+                                <a href="https://www.facebook.com/ideato.app.official" class="rounded-circle cmn-bg">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://x.com/ideato_app" class="rounded-circle cmn-bg">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.3881 7.49266L16.3338 0.825195H14.9249L9.76215 6.61446L5.63871 0.825195H0.882812L7.11826 9.57959L0.882812 16.5715H2.29185L7.7438 10.4578L12.0985 16.5715H16.8544L10.3877 7.49266H10.3881ZM8.45818 9.65672L7.8264 8.78498L2.79954 1.84844H4.96374L9.02047 7.44645L9.65225 8.31819L14.9255 15.5947H12.7613L8.45818 9.65705V9.65672Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ideato-app" class="rounded-circle cmn-bg">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ideato.app/" class="rounded-circle cmn-bg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://github.com/ideato-app" class="rounded-circle cmn-bg">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-widgets-wrapper footer-widget-wrapper2 pb-80 border-top">
+                    <div class="single-footer-widget wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="widget-head">
+                            <h3 class="black-clr fw-500">Contact</h3>
+                        </div>
+                        <ul class="list-area d-grid gap-md-4 gap-3">
+                            <li class="d-flex align-items-center gap-xl-3 gap-2">
+                                <div class="icon d-center cmn-bg w-40 rounded-circle">
+                                    <i class="fa-solid fa-location-dot black-clr"></i>
+                                </div>
+                                <a href="#0" class="d-block fs-seven black-clr fw-500">
+                                    <span class="fs-eight pra d-block">
+                                        Address
+                                    </span>
+                                    Egypt, Minia
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center gap-xl-3 gap-2">
+                                <div class="icon d-center cmn-bg w-40 rounded-circle">
+                                    <i class="fa-solid fa-phone black-clr"></i>
+                                </div>
+                                <a href="#0" class="d-block fs-seven black-clr fw-500">
+                                    <span class="fs-eight pra d-block">
+                                        Phone Number
+                                    </span>
+                                    +201104532940
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-footer-widget wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="widget-head">
+                            <h3 class="black-clr fw-500">Quick links</h3>
+                        </div>
+                        <ul class="list-linkes d-flex flex-column gap-3">
+                            <li>
+                                <a href="about.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    Testimonial
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    Services
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="contact.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-footer-widget wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="widget-head">
+                            <h3 class="black-clr fw-500">Service</h3>
+                        </div>
+                        <ul class="list-linkes d-flex flex-column gap-3">
+                            <li>
+                                <a href="service.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        Cloud Sphere Solutions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service-details.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    Cyber Secure 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="project-details.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    ui/ux design
+                                </a>
+                            </li>
+                            <li>
+                                <a href="project-details.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    App Development
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service-details.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                    <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                    Automation Services
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="footer-bottom py-4 cmn-border-top d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-sm-between justify-content-center gap-sm-0 gap-2">
+                    <p class="body-font fs-eight pra text-center">
+                        &copy; <a href="index.html" class="p1-clr">Idea to System</a> 2025 | All Rights Reserved
+                    </p>
+                    <ul
+                        class="condition d-flex flex-sm-nowrap flex-wrap justify-content-sm-start justify-content-center align-items-center gap-xxl-4 gap-xl-3 gap-sm-2 gap-1">
+                        <li>
+                            <a href="contact.html" class="fs-eight pra p1-hover">
+                                Terms & Condition
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="fs-eight pra p1-hover">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="fs-eight pra p1-hover">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Ele -->
+                <img src="assets/img/element/footer2-ele-top.png" alt="img" class="footer2-ele-top">
+                <img src="assets/img/element/footer2-ele-bottom.png" alt="img" class="footer2-ele-bottom">
+            </div>
+        </div>
+    </footer>
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< Nice Select Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Gsap Js >>-->
+        <script src="assets/js/gsap.min.js"></script>
+        <!--<< Lenis Js >>-->
+        <script src="assets/js/lenis.min.js"></script>
+        <!--<< ScrollSmoother Js >>-->
+        <script src="assets/js/scrollSmoother.js"></script>
+        <!--<< ScrollTrigger Js >>-->
+        <script src="assets/js/ScrollTrigger.min.js"></script>
+        <!--<< Spalit Text Js >>-->
+        <script src="assets/js/spilitext-gsap.js"></script>
+        <!--<< Valina Tilt Js >>-->
+        <script src="assets/js/vanilla-tilt.min.js"></script>
+        <!--<< Mixitup Js >>-->
+        <script src="assets/js/mixitup.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>

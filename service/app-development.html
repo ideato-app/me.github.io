@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Idea to System">
+    <meta name="description" content="Idea to System - App Development Service">
+    <title>App Development - Idea to System</title>
+    <link rel="shortcut icon" href="../assets/img/logo/favs.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        .service-card {
+            background-color: #f9f9f9;
+            border: 1px solid #eaeaea;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="body-bg">
+     <!-- Preloader, header, etc. will be included via JavaScript -->
+     <div class="custom-container-space rounded-top-4 cmn-bg mt-xxl-5 mb-xxl-5 mb-4">
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="D" class="letters-loading">
+                        D
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="2" class="letters-loading">
+                        2
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="Y" class="letters-loading">
+                        Y
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Cursor Pointer -->
+        <div class="mouse-follower">
+            <span class="cursor-outline"></span>
+            <span class="cursor-dot"></span>
+        </div>
+        <!-- End Cursor Pointer -->
+
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content pb-2">
+                        <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="../index.html">
+                                    <img src="../assets/img/logo/logo-dark.png" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul class="d-grid gap-2">
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">66 Broklyant,New India</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:ideato.app.official@gmail.com">ideato.app.official@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">All Day</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+201104532940" class="d-block">+201104532940 </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="contact.html"
+                                    class="common-btn text-white box-style first-box d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs-seven fw-normal white-clr overflow-hidden rounded-1 py-2"
+                                    style="background-color: var(--p1-clr);">
+                                    Start Your Project
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="social-wrapper d-flex flex-wrap align-items-center gap-xxl-3 gap-2">
+                                <a href="https://www.facebook.com/ideato.app.official" class="rounded-circle cmn-bg">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://x.com/ideato_app" class="rounded-circle cmn-bg">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.3881 7.49266L16.3338 0.825195H14.9249L9.76215 6.61446L5.63871 0.825195H0.882812L7.11826 9.57959L0.882812 16.5715H2.29185L7.7438 10.4578L12.0985 16.5715H16.8544L10.3877 7.49266H10.3881ZM8.45818 9.65672L7.8264 8.78498L2.79954 1.84844H4.96374L9.02047 7.44645L9.65225 8.31819L14.9255 15.5947H12.7613L8.45818 9.65705V9.65672Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ideato-app" class="rounded-circle cmn-bg">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ideato.app/" class="rounded-circle cmn-bg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://github.com/ideato-app" class="rounded-circle cmn-bg">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-view-thumb w-100 mt-4 d-xl-block d-none mb-4 cmn-bg rounded-4 p-4">
+                            <img src="assets/img/banner/contact-view.jpg" alt="img" class="w-100 rounded-4">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+        <header id="header-sticky" class="header-1 header-version1">
+            <div class="container">
+                <div class="header-common-wrapper">
+                    <div class="header-main">
+                        <div class="header-left">
+                            <div class="logo">
+                                <a href="../index.html" class="header-logo"
+                                    style="display: flex; align-items: center; text-decoration: none;">
+                                    <img src="../assets/img/logo/logo-dark.png" alt="logo-img">
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-right d-flex justify-content-end align-items-center">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="has-dropdown active menu-thumb">
+                                                <a href="../index.html">
+                                                    Home
+
+                                                </a>
+
+                                            </li>
+                                            <li>
+                                                <a href="about.html">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="service.html">
+                                                    Services
+
+                                                </a>
+
+                                            </li>
+                                            <li>
+                                                <a href="project.html">
+                                                    Projects
+
+                                                </a>
+
+                                            </li>
+
+                                            <li class="has-dropdown">
+                                                <a href="#0">
+                                                    Pages
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="about.html">About Us</a></li>
+                                                    <li class="has-dropdown">
+                                                        <a href="team.html">
+                                                            Team
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="team.html">Team</a></li>
+                                                            <li><a href="team-details.html">Team Details</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li><a href="faqs.html">Faqs</a></li>
+
+                                                    <li><a href="comming-soon.html">Coming Soon</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <a href="#0" class="search-trigger search-icon d-xl-none d-block">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                        <a href="contact.html"
+                            class="common-btn box-style btn2 d-xl-inline-flex d-none justify-content-center align-items-center gap-xxl-2 gap-2 fw-500 white-clr py-3 overflow-hidden rounded100"
+                            style="background-color: var(--p2-clr);">
+                            Contact Us
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                        <div class="header__hamburger d-xl-none my-auto">
+                            <div class="sidebar__toggle style2">
+                                <img src="assets/img/icon/menu.png" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section Start -->
+        <section class="breadcrumb-section cmn-bg position-relative fix">
+            <div class="container">
+                <div
+                    class="bread-content px-3 d-flex flex-wrap gap-3 align-items-center justify-content-md-between justify-content-center">
+                    <h2 class="black wow fadeInUp">App Development</h2>
+                    <ul class="d-flex align-items-center gap-3">
+                        <li>
+                            <a href="../index.html" class="fs-six black-clr fw-500">Home</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right p1-clr"></i></li>
+                        <li>
+                            <a href="../service.html" class="fs-six black-clr fw-500">Services</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right p1-clr"></i></li>
+                        <li class="fs-six black-clr fw-500">App Development</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bread Ele -->
+            <img src="../assets/img/element/bread-shape.png" alt="img" class="bread-ele">
+        </section>
+        <!-- Banner Section End -->
+
+        <!-- Service Section Start-->
+        <section class="service-details-section section-padding">
+            <div class="container">
+                <div class="row g-4 mb-4 pb-xl-2">
+                    <div class="col-lg-8">
+                        <div class="service-details-wraping">
+                            <div class="thumb mb-xxl-4 mb-sm-3 mb-2 wow fadeInUp" data-wow-delay=".4s">
+                                <img src="../assets/img/tech-service/Development.png" alt="img"
+                                    class="w-100 rounded-4">
+                            </div>
+                            <div class="mb-4 pb-xxl-2 wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="black fs-50 mb-xxl-3 mb-2 wow fadeInUp">App Development</h2>
+                                <p class="pra fs-six mb-xl-3 mb-2 wow fadeInUp" data-wow-delay=".4s">
+                                    Build powerful, scalable applications using cutting-edge technologies like Flutter
+                                    and
+                                    FastAPI. Our development team creates custom solutions tailored to your unique
+                                    business
+                                    needs.
+                                </p>
+                                <p class="pra fs-six wow fadeInUp" data-wow-delay=".4s">
+                                    From mobile applications to web platforms, we leverage modern frameworks and
+                                    development
+                                    practices to deliver high-quality, performant software that helps your business
+                                    thrive
+                                    in the digital landscape. Our cross-platform expertise ensures your solution works
+                                    seamlessly across all devices.
+                                </p>
+                            </div>
+                            <div class="wow fadeInUp" data-wow-delay="0.2s">
+                                <h3 class="black mb-xxl-4 mb-3 wow fadeInUp">Development Technologies</h3>
+                                <div class="d-flex flex-wrap justify-content-xl-between gap-3 mb-xxl-4 mb-3">
+                                    <ul class="d-grid gap-xxl-3 gap-2">
+                                        <li class="d-flex gap-2 align-items-center fs-seven pra">
+                                            <i class="fa-solid fa-check p1-clr"></i> Mobile Apps (Flutter, React Native)
+                                        </li>
+                                        <li class="d-flex gap-2 align-items-center fs-seven pra">
+                                            <i class="fa-solid fa-check p1-clr"></i> Web Applications (React, Angular)
+                                        </li>
+                                        <li class="d-flex gap-2 align-items-center fs-seven pra">
+                                            <i class="fa-solid fa-check p1-clr"></i> Custom Solutions
+                                        </li>
+                                    </ul>
+                                    <ul class="d-grid gap-xxl-3 gap-2">
+                                        <li class="d-flex gap-2 align-items-center fs-seven pra">
+                                            <i class="fa-solid fa-check p1-clr"></i> API Development (FastAPI, Node.js)
+                                        </li>
+                                        <li class="d-flex gap-2 align-items-center fs-seven pra">
+                                            <i class="fa-solid fa-check p1-clr"></i> Database Design & Integration
+                                        </li>
+                                        <li class="d-flex gap-2 align-items-center fs-seven pra">
+                                            <i class="fa-solid fa-check p1-clr"></i> E-commerce & Payment Solutions
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="pra fs-six">
+                                    Our development team uses modern frameworks and agile methodologies to deliver
+                                    high-quality applications that meet your business objectives. With expertise in
+                                    Flutter
+                                    for cross-platform mobile apps and FastAPI for high-performance backend services, we
+                                    ensure your digital products are both powerful and scalable.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-details-right">
+                            <div class="details-common category-service wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="black d-flex align-items-center gap-2 mb-4 fw_700 visible-slowly-right">
+                                    Our Services
+                                </h3>
+                                <ul class="cates">
+                                    <li>
+                                        <a href="idea-analysis.html"
+                                            class="d-flex align-items-center justify-content-between fs-five black">
+                                            Idea Analysis & Validation
+                                            <span class="just-serial">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-ux-design.html"
+                                            class="d-flex align-items-center justify-content-between fs-five black">
+                                            UI/UX Design
+                                            <span class="just-serial">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="app-development.html"
+                                            class="d-flex align-items-center justify-content-between fs-five black active">
+                                            App Development
+                                            <span class="just-serial">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="app-deployment.html"
+                                            class="d-flex align-items-center justify-content-between fs-five black">
+                                            App Deployment
+                                            <span class="just-serial">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="security-testing.html"
+                                            class="d-flex align-items-center justify-content-between fs-five black">
+                                            Security Testing
+                                            <span class="just-serial">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="automation-services.html"
+                                            class="d-flex align-items-center justify-content-between fs-five black">
+                                            Automation Services
+                                            <span class="just-serial">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="details-common p2-bg quick-call text-center wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="white-clr">Need Help? Call Us</h4>
+                                <a href="tel:+201104532940" class="d-center call rounded-circle mb-4"><i
+                                        class="fa-solid fa-phone"></i></a>
+                                <a href="tel:+201104532940" class="numbs heading-font">+201104532940</a>
+                            </div>
+                            <div class="details-common download-area wow fadeInUp" data-wow-delay=".6s">
+                                <a href="javascript:void(0)"
+                                    class="download-item d-flex align-items-center justify-content-between">
+                                    <span class="pra fs-seven">Development Process</span>
+                                    <div class="d-flex align-items-center gap-xxl-3 gap-2 pra">
+                                        (PDF) <i class="fa-solid fa-download p2-clr"></i>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)"
+                                    class="download-item d-flex align-items-center justify-content-between">
+                                    <span class="pra fs-seven">App Development Guide</span>
+                                    <div class="d-flex align-items-center gap-xxl-3 gap-2 pra">
+                                        (PDF) <i class="fa-solid fa-download p2-clr"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service Section End -->
+        <footer class="footer-section style2 z-1 position-relative fix">
+            <div class="container">
+                <div class="common-wrapper z-1 position-relative cmn-bg rounded-top-4 pt-80 px-xxl-5 px-4">
+                    <div class="footer-widgets-wrapper">
+                        <div class="social-adjustment d-flex justify-content-between align-items-center">
+                            <div class="single-footer-widget footer2-form wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="widget-head">
+                                    <a href="../index.html">
+                                        <img src="../assets/img/logo/logo-dark.png" alt="logo-img">
+                                    </a>
+                                </div>
+                                <div class="footer-content">
+                                    <p class="pra fs-eight mb-30 d-block">
+                                        Information Technology is a broad field the main man encompassing the
+                                        design Info Technology is a broad field the main
+                                        man
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="adjust-lin"></div>
+                            <div class="footer2-social">
+                                <a href="mailto:ideato.app.official@gmail.com" class="emails">
+                                    ideato.app.official@gmail.com
+                                </a>
+                                <div class="social-wrapper d-flex flex-wrap align-items-center gap-xxl-3 gap-2">
+                                    <a href="https://www.facebook.com/ideato.app.official"
+                                        class="rounded-circle cmn-bg">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://x.com/ideato_app" class="rounded-circle cmn-bg">
+                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.3881 7.49266L16.3338 0.825195H14.9249L9.76215 6.61446L5.63871 0.825195H0.882812L7.11826 9.57959L0.882812 16.5715H2.29185L7.7438 10.4578L12.0985 16.5715H16.8544L10.3877 7.49266H10.3881ZM8.45818 9.65672L7.8264 8.78498L2.79954 1.84844H4.96374L9.02047 7.44645L9.65225 8.31819L14.9255 15.5947H12.7613L8.45818 9.65705V9.65672Z"
+                                                fill="black" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/ideato-app" class="rounded-circle cmn-bg">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/ideato.app/" class="rounded-circle cmn-bg">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://github.com/ideato-app" class="rounded-circle cmn-bg">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-widgets-wrapper footer-widget-wrapper2 pb-80 border-top">
+                        <div class="single-footer-widget wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="widget-head">
+                                <h3 class="black-clr fw-500">Contact</h3>
+                            </div>
+                            <ul class="list-area d-grid gap-md-4 gap-3">
+                                <li class="d-flex align-items-center gap-xl-3 gap-2">
+                                    <div class="icon d-center cmn-bg w-40 rounded-circle">
+                                        <i class="fa-solid fa-location-dot black-clr"></i>
+                                    </div>
+                                    <a href="#0" class="d-block fs-seven black-clr fw-500">
+                                        <span class="fs-eight pra d-block">
+                                            Address
+                                        </span>
+                                        Egypt, Minia
+                                    </a>
+                                </li>
+                                <li class="d-flex align-items-center gap-xl-3 gap-2">
+                                    <div class="icon d-center cmn-bg w-40 rounded-circle">
+                                        <i class="fa-solid fa-phone black-clr"></i>
+                                    </div>
+                                    <a href="#0" class="d-block fs-seven black-clr fw-500">
+                                        <span class="fs-eight pra d-block">
+                                            Phone Number
+                                        </span>
+                                        +201104532940
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="single-footer-widget wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="widget-head">
+                                <h3 class="black-clr fw-500">Quick links</h3>
+                            </div>
+                            <ul class="list-linkes d-flex flex-column gap-3">
+                                <li>
+                                    <a href="about.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        About us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        Testimonial
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        Services
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="contact.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="single-footer-widget wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="widget-head">
+                                <h3 class="black-clr fw-500">Service</h3>
+                            </div>
+                            <ul class="list-linkes d-flex flex-column gap-3">
+                                <li>
+                                    <a href="service.html" class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        Cloud Sphere Solutions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html"
+                                        class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        Cyber Secure
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="project-details.html"
+                                        class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        ui/ux design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="project-details.html"
+                                        class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        App Development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html"
+                                        class="d-flex align-items-center gap-2 pra-clr fs-seven">
+                                        <i class="fa-solid fa-angles-right black-clr fs-eight"></i>
+                                        Automation Services
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="footer-bottom py-4 cmn-border-top d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-sm-between justify-content-center gap-sm-0 gap-2">
+                        <p class="body-font fs-eight pra text-center">
+                            &copy; <a href="../index.html" class="p1-clr">Idea to System</a> 2025 | All Rights Reserved
+                        </p>
+                        <ul
+                            class="condition d-flex flex-sm-nowrap flex-wrap justify-content-sm-start justify-content-center align-items-center gap-xxl-4 gap-xl-3 gap-sm-2 gap-1">
+                            <li>
+                                <a href="contact.html" class="fs-eight pra p1-hover">
+                                    Terms & Condition
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fs-eight pra p1-hover">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fs-eight pra p1-hover">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Ele -->
+                    <img src="assets/img/element/footer2-ele-top.png" alt="img" class="footer2-ele-top">
+                    <img src="assets/img/element/footer2-ele-bottom.png" alt="img" class="footer2-ele-bottom">
+                </div>
+            </div>
+        </footer>
+        <!-- Footer will be included via JavaScript -->
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/viewport.jquery.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/jquery.waypoints.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/lenis.min.js"></script>
+    <script src="../assets/js/scrollSmoother.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/spilitext-gsap.js"></script>
+    <script src="../assets/js/vanilla-tilt.min.js"></script>
+    <script src="../assets/js/mixitup.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

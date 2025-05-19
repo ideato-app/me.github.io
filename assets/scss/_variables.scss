@@ -1,0 +1,86 @@
+
+:root {
+    
+    --body: #F5F8FA;
+    --black: #000000;
+    --black2: #333333;
+    --white: #fff;
+    --p1-clr: #1A4D80;
+    --p2-clr: #3E6C96;
+    --p3-clr: #5B86A9;
+    --p4-clr: #0A6E71;
+    --p5-clr: #4A90E2;
+    --blogbox: #F0F4F8;
+    --cmnbg: #F8F9FB;
+    --n100-clr: rgba(240, 245, 250, 1);
+    --n200-clr: rgba(220, 225, 230, 1);
+    --n700-clr: rgba(35, 45, 65, 1);
+    --n800-clr: #3A4A65;
+    --n900-clr: #1E2A3A;
+    --theme: rgba(26, 77, 128, 1);
+    --pra: #4A5568;
+    --cmn-border: #E2E8F0;
+    --pra2: #CBD5E0;
+    --text: #4A5568;
+    --cmnwhite: #E2E8F0;
+    --star: #4A90E2;
+
+    --theme2: #3E6C96;
+    --header: #1E2A3A;
+    --text-2: rgba(255, 255, 255, 0.85);
+    --border: #E2E8F0;
+    --border2: #2D3748;
+    --border3: #4A90E2;
+    --bg: #F0F4F8;
+    --bg2: #EDF2F7;
+    --bg3: #3E6C96;
+    --bg4: #E2E8F0;
+    --bg5: #1E3A5F;
+    --bg6: #1A202C;
+    --box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+
+}
+
+// Theme Color - Defualt Colors
+$body: var(--body);
+$p1-clr: var(--p1-clr);
+$p2-clr: var(--p2-clr);
+$p3-clr: var(--p3-clr);
+$p4-clr: var(--p4-clr);
+$p5-clr: var(--p5-clr);
+$cmnbg: var(--cmnbg);
+$blogbox: var(--blogbox);
+$n100-clr: var(--n100-clr);
+$n200-clr: var(--n200-clr);
+$n700-clr: var(--n700-clr);
+$n800-clr: var(--n800-clr);
+$pra: var(--pra);
+$pra2: var(--pra2);
+$cmn-white: var(--cmnwhite);
+$star-clr: var(--star);
+
+$black: var(--black);
+$black2: var(--black2);
+$white: var(--white);
+$theme: var(--theme);
+$theme2: var(--theme2);
+$theme-color: var(--theme);
+$theme-color-2: var(--theme2);
+$text: var(--text);
+$text-color: var(--text);
+$text-color-2: var(--text-2);
+$header: var(--header);
+$header-color: var(--header);
+$border-color: var(--border);
+$border-color-2: var(--border2);
+$border-color-3: var(--border3);
+$bg-color: var(--bg);
+$bg-color-2: var(--bg2);
+$bg-color-3: var(--bg3);
+$bg-color-4: var(--bg4);
+$bg-color-5: var(--bg5);
+$bg-color-6: var(--bg6);
+$shadow: var(--box-shadow);
+
+
+
