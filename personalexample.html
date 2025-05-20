@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Example</title>
+    <meta name="description" content="Portfolio showcase featuring web development, design, and app projects">
+    <meta name="keywords" content="portfolio, web development, UI/UX, design, projects">
+    <title>Portfolio Showcase | Creative Projects</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/favs.png">
     <!-- Bootstrap CSS -->
@@ -14,46 +16,95 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         /* Custom portfolio showcase styles */
+        :root {
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-fast: 0.3s ease;
+            --transition-medium: 0.5s ease;
+            --card-radius: 15px;
+            --tag-bg: #e9ecef;
+            --tag-color: #495057;
+            --card-bg: #ffffff;
+            --text-secondary: #6c757d;
+            --border-light: #eeeeee;
+        }
+
         body {
             background-color: #f8f9fa;
             padding-top: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .portfolio-header {
             background: linear-gradient(rgba(26, 77, 128, 0.9), rgba(62, 108, 150, 0.8)), url('assets/img/project/allprojects.png');
             background-size: cover;
             background-position: center;
-            padding: 80px 0;
+            padding: 100px 0;
             color: white;
             text-align: center;
             margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.1) 100%);
+            z-index: 1;
+        }
+
+        .portfolio-header .container {
+            position: relative;
+            z-index: 2;
         }
 
         .portfolio-card {
-            background-color: white;
-            border-radius: 15px;
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: var(--card-shadow);
             margin-bottom: 30px;
-            transition: transform 0.3s ease;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .portfolio-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
         .portfolio-img {
             height: 250px;
             overflow: hidden;
+            position: relative;
+        }
+
+        .portfolio-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.05));
+            pointer-events: none;
         }
 
         .portfolio-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform var(--transition-medium);
         }
 
         .portfolio-card:hover .portfolio-img img {
@@ -62,17 +113,28 @@
 
         .portfolio-info {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .portfolio-title {
             font-size: 22px;
             font-weight: 600;
             margin-bottom: 10px;
+            color: #333;
+            transition: color var(--transition-fast);
+        }
+
+        .portfolio-card:hover .portfolio-title {
+            color: var(--p1-clr);
         }
 
         .portfolio-description {
-            color: #6c757d;
+            color: var(--text-secondary);
             margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
         }
 
         .portfolio-meta {
@@ -80,7 +142,8 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 15px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid var(--border-light);
+            margin-top: auto;
         }
 
         .portfolio-likes {
@@ -95,11 +158,21 @@
             color: #dc3545;
             font-size: 20px;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.2s, color 0.2s;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .like-button:hover {
+        .like-button:hover,
+        .like-button:focus {
             transform: scale(1.2);
+            outline: none;
+        }
+
+        .like-button.liked {
+            color: #ff0033;
         }
 
         .portfolio-tags {
@@ -110,12 +183,41 @@
         }
 
         .tag {
-            background-color: #e9ecef;
-            color: #495057;
+            background-color: var(--tag-bg);
+            color: var(--tag-color);
             padding: 4px 12px;
             border-radius: 30px;
             font-size: 12px;
             font-weight: 500;
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+        }
+
+        .portfolio-card:hover .tag {
+            background-color: rgba(var(--p1-clr-rgb, 26, 77, 128), 0.1);
+            color: var(--p1-clr);
+        }
+
+        .view-btn {
+            background-color: var(--p1-clr);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .view-btn:hover,
+        .view-btn:focus {
+            background-color: var(--p2-clr);
+            transform: translateY(-3px);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .back-to-site {
@@ -135,97 +237,150 @@
             transition: all 0.3s;
         }
 
-        .back-to-site:hover {
+        .back-to-site:hover,
+        .back-to-site:focus {
             background: var(--p2-clr);
             transform: translateY(-3px);
             color: white;
+        }
+
+        footer {
+            background: linear-gradient(to right, #1a4d80, #3e6c96);
+            padding: 30px 0;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-header {
+                padding: 70px 0;
+            }
+
+            .back-to-site {
+                top: 10px;
+                left: 10px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- Back to Site Button -->
-    <a href="service/personal-website.html" class="back-to-site">
-        <i class="fas fa-arrow-left"></i>
+    <a href="service/personal-website.html" class="back-to-site" aria-label="Return to service page">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i>
         Back to Service Page
     </a>
 
     <!-- Portfolio Header -->
     <header class="portfolio-header">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <h1 class="display-4 fw-bold mb-3">Portfolio Showcase</h1>
-            <p class="lead mb-0">Explore our featured projects with detailed information and analytics</p>
+            <p class="lead mb-0">Explore creative and innovative projects</p>
         </div>
     </header>
 
     <!-- Portfolio Showcase -->
-    <section class="portfolio-showcase">
+    <section class="portfolio-showcase py-5">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <!-- Portfolio Item 1 -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-card">
                         <div class="portfolio-img">
-                            <img src="assets/img/websits/mohamed-emad.png" alt="E-commerce Website">
+                            <img src="assets/img/websits/mohamed-emad.png"
+                                alt="Flutter developer portfolio website showing mobile and web interfaces">
                         </div>
                         <div class="portfolio-info">
                             <h3 class="portfolio-title">Mohamed Emad</h3>
                             <div class="portfolio-tags">
-                                <span class="tag">flutter</span>
+                                <span class="tag">Flutter</span>
                                 <span class="tag">Web Development</span>
                                 <span class="tag">UI/UX</span>
                                 <span class="tag">Database</span>
                             </div>
                             <p class="portfolio-description">
-                                A comprehensive e-commerce solution with product management, user authentication, and
-                                payment processing capabilities.
+                                A comprehensive Flutter developer portfolio showcasing mobile and web application
+                                projects, skills, and professional experience.
                             </p>
                             <div class="portfolio-meta">
                                 <div class="portfolio-likes">
-                                    <button class="like-button" onclick="updateLikes(1)">
-                                        <i class="fas fa-heart"></i>
+                                    <button class="like-button" onclick="updateLikes(1)" aria-label="Like this project">
+                                        <i class="fas fa-heart" aria-hidden="true"></i>
                                     </button>
                                     <span id="likes-1" class="likes-count">124</span> likes
                                 </div>
                                 <a href="https://mohamed-emad-c4.github.io/portfolio.github.io" target="_blank"
-                                    class="common-btn box-style d-inline-flex justify-content-center align-items-center gap-2 fw-500 white-clr py-2 px-3 overflow-hidden rounded-3"
-                                    style="background-color: var(--p1-clr);">
-                                    View 
-                                    <i class="fas fa-arrow-right"></i>
+                                    rel="noopener" class="view-btn" aria-label="View Mohamed Emad's portfolio">
+                                    View
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Portfolio Item 2 -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="portfolio-card">
                         <div class="portfolio-img">
-                            <img src="assets/img/websits/business-plan.png" alt="Mobile App">
+                            <img src="assets/img/websits/Mohamed-Abd-El-rahim.png"
+                                alt="Business plan website interface showing planning tools">
                         </div>
                         <div class="portfolio-info">
-                            <h3 class="portfolio-title">business plan</h3>
+                            <h3 class="portfolio-title">I'm Mohamed Abd El-rahim</h3>
                             <div class="portfolio-tags">
-                                <span class="tag">business plan</span>
-                                <span class="tag">website</span>
-                                <span class="tag">Services</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Website</span>
                             </div>
                             <p class="portfolio-description">
-                                A business plan website that helps users create and manage their business plans.
+                                Expert Mobile App Developer
+                                with 5+ Years of Cross-Platform Experience
                             </p>
                             <div class="portfolio-meta">
                                 <div class="portfolio-likes">
-                                    <button class="like-button" onclick="updateLikes(2)">
-                                        <i class="fas fa-heart"></i>
+                                    <button class="like-button" onclick="updateLikes(2)" aria-label="Like this project">
+                                        <i class="fas fa-heart" aria-hidden="true"></i>
                                     </button>
                                     <span id="likes-2" class="likes-count">89</span> likes
                                 </div>
                                 <a href="https://idea-to-sys-temp.unaux.com/business-plan" target="_blank"
-                                    class="common-btn box-style d-inline-flex justify-content-center align-items-center gap-2 fw-500 white-clr py-2 px-3 overflow-hidden rounded-3"
-                                    style="background-color: var(--p1-clr);">
-                                    View 
-                                    <i class="fas fa-arrow-right"></i>
+                                    rel="noopener" class="view-btn" aria-label="View business plan website">
+                                    View
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-card">
+                        <div class="portfolio-img">
+                            <img src="assets/img/websits/business-plan.png"
+                                alt="Business plan website interface showing planning tools">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">Business Plan (In Progress)</h3>
+                            <div class="portfolio-tags">
+                                <span class="tag">Business Plan</span>
+                                <span class="tag">Website</span>
+                                <span class="tag">Services</span>
+                            </div>
+                            <p class="portfolio-description">
+                                A comprehensive business plan platform that helps entrepreneurs create, manage, and
+                                share their business strategies with intuitive tools and templates.
+                            </p>
+                            <div class="portfolio-meta">
+                                <div class="portfolio-likes">
+                                    <button class="like-button" onclick="updateLikes(2)" aria-label="Like this project">
+                                        <i class="fas fa-heart" aria-hidden="true"></i>
+                                    </button>
+                                    <span id="likes-2" class="likes-count">89</span> likes
+                                </div>
+                                <a href="https://idea-to-sys-temp.unaux.com/business-plan" target="_blank"
+                                    rel="noopener" class="view-btn" aria-label="View business plan website">
+                                    View
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -233,69 +388,123 @@
                 </div>
 
                 <!-- Portfolio Item 3 -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-card">
                         <div class="portfolio-img">
-                            <img src="assets/img/project/allprojects.png" alt="AI Dashboard">
+                            <img src="assets/img/websits/freelancer.png"
+                                alt="Freelancer platform showing services and portfolio">
                         </div>
                         <div class="portfolio-info">
-                            <h3 class="portfolio-title">freelancer</h3>
+                            <h3 class="portfolio-title">Freelancer Platform (In Progress)</h3>
                             <div class="portfolio-tags">
-                                <span class="tag">website</span>
+                                <span class="tag">Website</span>
                                 <span class="tag">Designer</span>
                                 <span class="tag">Services</span>
                             </div>
                             <p class="portfolio-description">
-                                A freelancer website that helps users find and connect with freelancers.
+                                A modern freelancer marketplace connecting talented professionals with clients,
+                                featuring portfolio showcases, secure payments, and project management tools.
                             </p>
                             <div class="portfolio-meta">
                                 <div class="portfolio-likes">
-                                    <button class="like-button" onclick="updateLikes(3)">
-                                        <i class="fas fa-heart"></i>
+                                    <button class="like-button" onclick="updateLikes(3)" aria-label="Like this project">
+                                        <i class="fas fa-heart" aria-hidden="true"></i>
                                     </button>
                                     <span id="likes-3" class="likes-count">70</span> likes
                                 </div>
-                                <a href="https://idea-to-sys-temp.unaux.com/freelancer/" target="_blank"
-                                    class="common-btn box-style d-inline-flex justify-content-center align-items-center gap-2 fw-500 white-clr py-2 px-3 overflow-hidden rounded-3"
-                                    style="background-color: var(--p1-clr);">
-                                    View 
-                                    <i class="fas fa-arrow-right"></i>
+                                <a href="https://idea-to-sys-temp.unaux.com/freelancer/" target="_blank" rel="noopener"
+                                    class="view-btn" aria-label="View freelancer website">
+                                    View
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="py-4 bg-dark text-center text-white mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Portfolio Showcase. All Rights Reserved.</p>
-            <p class="mt-2 mb-0"><a href="service/personal-website.html"
-                    class="text-white text-decoration-underline">Return to Service Page</a></p>
+    <footer class="text-center text-white">
+        <div class="container py-4">
+            <p class="mb-2">&copy; 2025 Portfolio Showcase. All Rights Reserved.</p>
+            <a href="service/personal-website.html" class="text-white text-decoration-underline">
+                Return to Service Page
+            </a>
         </div>
     </footer>
 
     <!-- JavaScript Files -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // Simple like functionality
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Enhanced like functionality
         function updateLikes(id) {
             const likesElement = document.getElementById(`likes-${id}`);
             let currentLikes = parseInt(likesElement.textContent);
             likesElement.textContent = currentLikes + 1;
 
+            // Store likes in local storage to persist
+            const storedLikes = JSON.parse(localStorage.getItem('portfolioLikes') || '{}');
+            storedLikes[id] = (storedLikes[id] || 0) + 1;
+            localStorage.setItem('portfolioLikes', JSON.stringify(storedLikes));
+
             // Visual feedback
             const button = event.currentTarget;
             button.classList.add('liked');
             button.style.transform = 'scale(1.3)';
+
+            // Create heart animation
+            const heart = document.createElement('i');
+            heart.classList.add('fas', 'fa-heart', 'like-animation');
+            heart.style.position = 'absolute';
+            heart.style.fontSize = '16px';
+            heart.style.color = '#ff0033';
+            heart.style.pointerEvents = 'none';
+
+            // Position the heart near the button
+            const rect = button.getBoundingClientRect();
+            heart.style.left = `${rect.left + rect.width / 2}px`;
+            heart.style.top = `${rect.top}px`;
+
+            // Animation styles
+            heart.style.transition = 'all 0.8s ease-out';
+            heart.style.opacity = '1';
+
+            document.body.appendChild(heart);
+
+            // Animate the heart
             setTimeout(() => {
+                heart.style.transform = 'translateY(-40px)';
+                heart.style.opacity = '0';
+            }, 50);
+
+            // Remove the heart after animation
+            setTimeout(() => {
+                document.body.removeChild(heart);
                 button.style.transform = 'scale(1)';
-            }, 200);
+            }, 800);
         }
+
+        // Check if there are stored likes and update the UI accordingly
+        document.addEventListener('DOMContentLoaded', function () {
+            const storedLikes = JSON.parse(localStorage.getItem('portfolioLikes') || '{}');
+            for (const id in storedLikes) {
+                const button = document.querySelector(`button[onclick="updateLikes(${id})"]`);
+                if (button && storedLikes[id] > 0) {
+                    button.classList.add('liked');
+                }
+            }
+        });
     </script>
 </body>
 
